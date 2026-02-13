@@ -1,0 +1,7 @@
+# Adding screenshots to remaining project pages
+
+## SIEM Implementation - Page 6
+## IoT Intrusion Detection - Page 8  
+## Blood Bank System - Page 10
+
+Done manually via file edits.

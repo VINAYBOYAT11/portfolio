@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vinay Boyat | System Schematic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --bg-primary: #1A1A2A;
+            --text-main: #FFFFFF;
+            --text-secondary: #ADD8E6;
+            --accent: #FFFF00;
+            --grid-line: rgba(173, 216, 230, 0.1);
+            --border-line: rgba(173, 216, 230, 0.3);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+        .blueprint-block {
+            border: 1px solid var(--border-line);
+            background-color: rgba(26, 26, 42, 0.8);
+            position: relative;
+        }
+        .blueprint-block::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid var(--text-secondary);
+            background: var(--bg-primary);
+        }
+        .system-connector-h {
+            height: 1px;
+            background: var(--border-line);
+            position: absolute;
+        }
+        .system-connector-v {
+            width: 1px;
+            background: var(--border-line);
+            position: absolute;
+        }
+        .accent-text {
+            color: var(--accent);
+        }
+        .schematic-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+<style>
+    #tor-toggle:checked ~ main .blueprint-block {
+        border-color: #00F3FF;
+        box-shadow: 0 0 20px rgba(0, 243, 255, 0.4), inset 0 0 10px rgba(0, 243, 255, 0.1);
+        transition: all 0.5s ease-in-out;
+    }
+    #tor-toggle:checked ~ main .blueprint-block .accent-text {
+        color: #00F3FF;
+        text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+    }
+    #tor-toggle:checked ~ main .blueprint-block h3 {
+        color: #00F3FF;
+        text-shadow: 0 0 5px rgba(0, 243, 255, 0.5);
+    }
+    .blueprint-block {
+        transition: all 0.5s ease-in-out;
+    }
+    .tor-switch {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        padding: 5px 10px;
+        border: 1px solid var(--border-line);
+        background: rgba(0, 0, 0, 0.3);
+    }
+    .tor-switch-slider {
+        width: 30px;
+        height: 14px;
+        background: #333;
+        position: relative;
+        border: 1px solid var(--border-line);
+    }
+    .tor-switch-slider::after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 10px;
+        height: 10px;
+        background: var(--text-secondary);
+        transition: 0.3s;
+    }
+    #tor-toggle:checked + .tor-switch .tor-switch-slider::after {
+        left: 17px;
+        background: #00F3FF;
+        box-shadow: 0 0 5px #00F3FF;
+    }
+    #tor-toggle:checked + .tor-switch {
+        border-color: #00F3FF;
+    }
+</style></head>
+<body class="min-h-screen p-4 md:p-10">
+<div class="max-w-[1000px] mx-auto flex flex-col">
+<nav class="lg:col-span-12 border-x border-t border-[var(--border-line)] p-4 flex justify-between items-center bg-[var(--bg-primary)]">
+<span class="schematic-label mb-0">System.Access.Port</span>
+<a class="text-xs font-bold tracking-widest hover:text-[var(--accent)] transition-colors text-[var(--text-secondary)]" href="#">ABOUT</a>
+</nav>
+<header class="blueprint-block p-8 md:p-12 flex flex-col border-b lg:border-b-0 border-x">
+<span class="schematic-label">Primary_Subject_ID</span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 text-[var(--text-main)]">
+                Vinay Boyat
+            </h1>
+<div class="flex items-center space-x-6 mb-8" data-purpose="social-icons">
+<a class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors" href="https://linkedin.com" target="_blank">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors" href="https://github.com" target="_blank">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors" href="mailto:vinayboyat102@gmail.com">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v15.438h-24v-15.438l12 9.725z"></path></svg>
+</a>
+</div>
+<span class="schematic-label">Mission_Briefing</span>
+<p class="text-sm md:text-base leading-relaxed text-[var(--text-secondary)]">
+                Crafting scalable infrastructure by day, securing the digital perimeter by night. 
+                B.Tech in Computer and Communication Engineering from Manipal University Jaipur. 
+                Specialized in <span class="text-white font-bold">Cloud Platforms</span>, 
+                <span class="text-white font-bold">Containerization</span>, and 
+                <span class="text-white font-bold">DevSecOps</span>. Currently building 
+                automated CI/CD pipelines and exploring the depths of cybersecurity. 🚀⚡
+            </p>
+</header>
+<main class="flex flex-col relative border-x border-b border-[var(--border-line)]"><div class="p-4 border-b border-[var(--border-line)] bg-black/20 flex items-center justify-between">
+<span class="schematic-label mb-0">Network.Status: <span class="accent-text">ENCRYPTED</span></span>
+<input class="hidden" id="tor-toggle" type="checkbox"/>
+<label class="tor-switch" for="tor-toggle">
+<span class="text-[10px] font-mono tracking-tighter">TOR_CONNECTION</span>
+<div class="tor-switch-slider"></div>
+<span class="text-[10px] font-mono opacity-50">ON/OFF</span>
+</label>
+</div>
+<div class="blueprint-block p-8 border-l-0">
+<span class="schematic-label accent-text font-bold">Project.Module_01</span>
+<time class="accent-text text-xs font-bold mb-2 block tracking-widest">FEB 2026</time>
+<h3 class="text-2xl font-bold mb-4">Portfolio Website Deployment on Deep Web</h3>
+<p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-4 opacity-80">
+                    Designed and deployed a personal portfolio website hosted as a Tor hidden service on the deep web. 
+                    Configured Tor services and Nginx on a Linux server.
+                </p>
+<div class="flex flex-wrap gap-3 text-[var(--text-secondary)] text-[10px] font-mono border-t border-[var(--border-line)] pt-4">
+<span>LINUX</span> | <span>TOR</span> | <span>HTML</span> | <span>CSS</span> | <span>NGINX</span>
+</div>
+</div>
+<div class="blueprint-block p-8 border-l-0 border-t-0">
+<span class="schematic-label accent-text font-bold">Project.Module_02</span>
+<time class="accent-text text-xs font-bold mb-2 block tracking-widest">JAN 2026</time>
+<h3 class="text-2xl font-bold mb-4">Containerized Application Deployment using Kubernetes Pods</h3>
+<p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-4 opacity-80">
+                    Deployed a containerized web application on a Kubernetes cluster using Pod specifications. 
+                    Monitored and debugged pod lifecycles using <code class="bg-white/10 px-1 rounded text-white font-mono">kubectl</code>.
+                </p>
+<div class="flex flex-wrap gap-3 text-[var(--text-secondary)] text-[10px] font-mono border-t border-[var(--border-line)] pt-4">
+<span>DOCKER</span> | <span>YAML</span> | <span>LINUX</span> | <span>KUBERNETES</span>
+</div>
+</div>
+<div class="blueprint-block p-8 border-l-0 border-t-0">
+<span class="schematic-label accent-text font-bold">Project.Module_03</span>
+<time class="accent-text text-xs font-bold mb-2 block tracking-widest">MAY 2025</time>
+<h3 class="text-2xl font-bold mb-4">Open Source S.I.E.M Implementation</h3>
+<p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-4 opacity-80">
+                    Set up an open-source system to collect and organize security logs from distributed systems, enabling real-time monitoring.
+                </p>
+<div class="flex flex-wrap gap-3 text-[var(--text-secondary)] text-[10px] font-mono border-t border-[var(--border-line)] pt-4">
+<span>GRAYLOG</span> | <span>OPENSEARCH</span> | <span>GRAFANA</span> | <span>DOCKER</span>
+</div>
+</div>
+<div class="blueprint-block p-8 border-l-0 border-t-0">
+<span class="schematic-label accent-text font-bold">Project.Module_04</span>
+<time class="accent-text text-xs font-bold mb-2 block tracking-widest">APRIL 2024</time>
+<h3 class="text-2xl font-bold mb-4">Intrusion Detection in MQTT-based IoT Networks</h3>
+<p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-4 opacity-80">
+                    Developed a smart IoT security solution using federated learning. Trained Random Forest models on edge devices using Flower framework, achieving over 96% detection accuracy.
+                </p>
+<div class="flex flex-wrap gap-3 text-[var(--text-secondary)] text-[10px] font-mono border-t border-[var(--border-line)] pt-4">
+<span>PYTHON</span> | <span>PANDAS</span> | <span>FLOWER</span> | <span>MQTT</span> | <span>SCIKIT-LEARN</span>
+</div>
+</div><div class="blueprint-block p-8 border-l-0 border-t-0">
+<span class="schematic-label accent-text font-bold">Project.Module_05</span>
+<time class="accent-text text-xs font-bold mb-2 block tracking-widest">APRIL 2023</time>
+<h3 class="text-2xl font-bold mb-4">Blood Bank Management System</h3>
+<p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-4 opacity-80">
+                    Built a relational database to manage 500+ donor records and 100+ transfusion logs, reducing manual inventory tracking work by 70% through automated alerts.
+                </p>
+<div class="flex flex-wrap gap-3 text-[var(--text-secondary)] text-[10px] font-mono border-t border-[var(--border-line)] pt-4">
+<span>SQL</span> | <span>RDBMS</span> | <span>ER DIAGRAMS</span>
+</div>
+</div></main>
+
+
+<div class="grid grid-cols-1 lg:grid-cols-3 border-x border-[var(--border-line)]">
+<div class="blueprint-block p-8 border-t-0 border-l-0 border-r-0 lg:border-r">
+<span class="schematic-label accent-text font-bold">Experience.Log</span>
+<div class="space-y-8 mt-4">
+<div>
+<h4 class="text-lg font-bold">Siddhi Infonet India Pvt. Ltd</h4>
+<p class="text-[var(--text-secondary)] text-xs italic mb-1">CI/CD Pipeline Specialist</p>
+<time class="text-[var(--text-secondary)] text-[10px] opacity-60">JUNE 2025 — DEC 2025</time>
+</div>
+<div>
+<h4 class="text-lg font-bold">FixMyBits</h4>
+<p class="text-[var(--text-secondary)] text-xs italic mb-1">Founder &amp; Security Lead</p>
+<time class="text-[var(--text-secondary)] text-[10px] opacity-60">2026 — PRESENT</time>
+</div>
+</div>
+</div>
+<div class="blueprint-block p-8 border-t-0 border-l-0 border-r-0 lg:border-r">
+<span class="schematic-label accent-text font-bold">Technical.Specs</span>
+<div class="grid grid-cols-2 gap-6 mt-4">
+<div>
+<h5 class="text-[var(--text-secondary)] text-[10px] font-bold mb-1 opacity-60">CLOUD/INFRA</h5>
+<p class="text-xs">AWS, Azure, Terraform, Ansible</p>
+</div>
+<div>
+<h5 class="text-[var(--text-secondary)] text-[10px] font-bold mb-1 opacity-60">CONTAINERS</h5>
+<p class="text-xs">Docker, Kubernetes</p>
+</div>
+<div>
+<h5 class="text-[var(--text-secondary)] text-[10px] font-bold mb-1 opacity-60">SCRIPTING</h5>
+<p class="text-xs">Python, Bash</p>
+</div>
+<div>
+<h5 class="text-[var(--text-secondary)] text-[10px] font-bold mb-1 opacity-60">CI/CD</h5>
+<p class="text-xs">GitHub Actions, Jenkins</p>
+</div>
+</div>
+</div>
+<div class="blueprint-block p-8 border-t-0 border-l-0 border-r-0">
+<span class="schematic-label accent-text font-bold">Validation.Certs</span>
+<ul class="mt-4 space-y-3 text-xs">
+<li class="flex justify-between border-b border-[var(--border-line)] pb-2">
+<span>Google Cybersecurity Prof.</span>
+<span class="accent-text font-mono">2024</span>
+</li>
+<li class="flex justify-between border-b border-[var(--border-line)] pb-2">
+<span>Red Hat System Admin</span>
+<span class="accent-text font-mono">2023</span>
+</li>
+<li class="flex justify-between border-b border-[var(--border-line)] pb-2">
+<span>Cisco Networking Basics</span>
+<span class="accent-text font-mono">2023</span>
+</li>
+<li class="flex justify-between pb-2">
+<span class="italic opacity-70">CEH (In Progress)</span>
+<span class="text-[var(--text-secondary)]">ACTIVE</span>
+</li>
+</ul>
+</div>
+</div>
+<section class="lg:col-span-12 blueprint-block p-8 border-t-0 bg-[var(--bg-primary)] border-x">
+<span class="schematic-label accent-text font-bold">System.Communication.Interface</span>
+<form class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-[var(--text-secondary)] uppercase tracking-wider">Subject_Name</label>
+<input class="w-full bg-black/20 border border-[var(--border-line)] p-3 text-sm focus:outline-none focus:border-[var(--accent)] text-white font-mono placeholder:opacity-30" placeholder="ENTER NAME..." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-[var(--text-secondary)] uppercase tracking-wider">Contact_Endpoint</label>
+<input class="w-full bg-black/20 border border-[var(--border-line)] p-3 text-sm focus:outline-none focus:border-[var(--accent)] text-white font-mono placeholder:opacity-30" placeholder="ENTER EMAIL..." type="email"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-[10px] font-bold text-[var(--text-secondary)] uppercase tracking-wider">Payload_Data</label>
+<textarea class="w-full bg-black/20 border border-[var(--border-line)] p-3 text-sm focus:outline-none focus:border-[var(--accent)] text-white font-mono placeholder:opacity-30" placeholder="ENTER MESSAGE..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2">
+<button class="bg-[#00F3FF] text-black px-12 py-4 text-sm font-black tracking-[0.25em] uppercase hover:bg-white hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition-all duration-300 flex items-center justify-center gap-3 group shadow-[0_0_15px_rgba(0,243,255,0.5)] w-full md:w-auto" type="submit"><span>TRANSMIT MESSAGE</span>
+<svg class="w-5 h-5 fill-current group-hover:translate-x-2 transition-transform" viewbox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg></button>
+</div>
+</form>
+</section><footer class="lg:col-span-12 blueprint-block p-6 border-t-0 flex flex-col md:flex-row justify-between items-center bg-[var(--bg-primary)] border-x">
+<p class="text-[var(--text-secondary)] text-[10px] tracking-widest uppercase">
+                Maintainer: <a class="accent-text hover:underline" href="#">vinayboyat13</a>
+</p>
+<div class="flex space-x-4 mt-4 md:mt-0">
+<div class="border border-[var(--border-line)] px-3 py-1 text-[10px] font-mono flex items-center gap-2">
+<svg class="w-3 h-3 fill-white" viewbox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    POST
+                </div>
+<div class="border border-[var(--border-line)] px-3 py-1 text-[10px] font-mono flex items-center gap-2">
+<svg class="w-3 h-3 fill-white" viewbox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+                    STAR
+                </div>
+</div>
+</footer>
+</div>
+</body></html>

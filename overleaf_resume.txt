@@ -1,0 +1,176 @@
+\documentclass[a4paper,11pt]{article}
+
+% Page layout
+\usepackage[a4paper,top=0.45in,bottom=0.45in,left=0.55in,right=0.55in]{geometry}
+\usepackage{titlesec,enumitem,hyperref,xcolor,array,tabularx}
+\pagenumbering{gobble}
+
+% Spacing
+\setlength{\parskip}{1pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\baselinestretch}{0.95}
+
+% Section formatting
+\definecolor{sectionblue}{HTML}{1F497D}
+\titleformat{\section}{\bfseries\color{sectionblue}\normalsize}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{5pt}{2pt}
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=*}
+
+% Links
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black
+}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+    {\LARGE \textbf{Vinay Boyat}} \\[2pt]
+    \href{mailto:vinayboyat102@gmail.com}{vinayboyat102@gmail.com} \quad
+    \href{tel:+919251515556}{+91-92515-15556} \quad
+    \href{}{Portfolio }\quad
+    \href{https://www.linkedin.com/in/vinayboyat/}{LinkedIn} \quad
+    \href{https://github.com/VINAYBOYAT11}{GitHub} \quad
+  
+\end{center}
+
+% ================= TITLE =================
+
+\section*{Education}
+
+\noindent
+\textbf{Manipal University Jaipur} \hfill 2021 -- 2025 \\
+B.Tech in Computer and Communication Engineering \\
+Minor in Cybersecurity \\
+CGPA: 7.84 / 10
+
+
+
+% ================= SKILLS =================
+\section*{Technical Skills}
+\begin{tabular}{@{}p{5.8cm}p{11.8cm}@{}}
+\textbf{Cloud Platforms:} & AWS , Azure (basic) \\
+
+\textbf{Containerization:} & Docker, Kubernetes (Pods, Deployments, Services),\\
+
+
+
+\textbf{Infrastructure as Code:} & Terraform, Ansible (basics) \\
+
+%\textbf{Monitoring \& Logging:} & Prometheus, Grafana, system logs, alerting concepts \\
+
+%\textbf{OS \& Scripting:} & Linux (users, permissions, services), Bash, YAML \\
+
+\textbf{Scripting Languages:} & Python , Bash  \\
+\textbf{CI/CD :} & GitHub Actions, Jenkins (basics) \\
+
+%\textbf{Security (DevSecOps):} & IAM, SSH hardening, least privilege, network security fundamentals \\
+\end{tabular}
+\section*{Experience}
+
+\noindent
+\textbf{Siddhi Infonet India Pvt. Ltd} \hfill June 2025 -- December 2025
+
+\vspace{-3pt}   % reduces space before bullets
+
+\begin{itemize}[topsep=0pt]
+  \item Implemented CI/CD pipelines and deployment automation while supporting application build, monitoring, and basic cloud infrastructure setup following Agile and DevOps practices.
+  \end{itemize}
+\noindent
+\textbf{FixMyBits} -- Founder \& Security Lead \hfill 2026 -- Present
+
+\vspace{-3pt}
+
+\begin{itemize}[topsep=0pt]
+  \item Founded a non-profit cybersecurity platform providing free vulnerability assessments to startups.
+  \item Conducted network scanning, web application testing (OWASP Top 10), API security reviews, and cloud security audits following industry best practices.
+\end{itemize}
+
+
+  
+
+
+
+
+% ================= PROJECTS =================
+\section*{Projects}
+
+
+\noindent
+\noindent
+\noindent
+\textbf{Portfolio Website Deployment on Deep Web (Tor Network)} \hfill Feb 2026 \\
+\textit{(Web Security / Deployment) \hfill (Linux, Tor, HTML, CSS, Nginx)}
+\begin{itemize}
+  \item Designed and deployed a personal portfolio website hosted as a Tor hidden service on the deep web.
+  \item Configured Tor services and Nginx on a Linux server to securely serve the website over the Tor network.
+  \item Implemented basic security and access configurations to ensure anonymity and controlled access.
+\end{itemize}
+\noindent
+\textbf{Containerized Application Deployment using Kubernetes Pods} \hfill Jan 2026 \\
+\textit{(DevOps) \hfill (Docker, YAML, Linux, Kubernetes)}
+\begin{itemize}
+  \item Deployed a containerized web application on a Kubernetes cluster using Pod specifications and YAML manifests.
+  \item Configured container images, ports, and runtime  through Kubernetes YAML definitions.
+  \item Monitored, managed, and debugged pod lifecycles using \texttt{kubectl} commands on Linux.
+\end{itemize}
+
+
+\noindent
+\textbf{Open Source S.I.E.M Implementation} \hfill May 2025 \\
+\textit{(Security, DevOps) \href{https://www.linkedin.com/posts/vinayboyat_cybersecurity-siem-opensource-activity-7349433641279643652-g2l0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADLgAn8BgrBC3GVyUyjk6fuN96DYmuJOOVs}{Video Demonstration } \hfill (Graylog, OpenSearch, Grafana, Docker, Debian 12)}
+\begin{itemize}
+  \item Set up an open-source system to collect and organize security logs from distributed systems, enabling real-time monitoring.
+  \item Containerized and deployed monitoring components using Docker on Debian Linux servers.
+  \item Created alert rules and automation to detect threats such as failed logins and port scans
+
+  \vspace{+3pt}
+  
+
+\end{itemize}
+
+\noindent
+{\textcolor{black}{\textbf{Intrusion Detection in MQTT-based IoT Networks using Federated Learning}}} 
+\hfill April 2024 
+\textit{(Research, ML) \href{https://www.linkedin.com/posts/vinayboyat_iotsecurity-federatedlearning-dataprivacy-activity-7186959585876799488-NALz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADLgAn8BgrBC3GVyUyjk6fuN96DYmuJOOVs}{{ Video Demonstration }}\hfill (Python, Pandas,Federated Learning, Flower Framework )}
+
+
+
+
+
+\begin{itemize}
+  \item Developed a smart IoT security solution that detects anomalies without collecting raw data, using federated learning.
+  \item Processed over 350,000 traffic records from the MQTT-IoT-IDS2020 dataset and trained Random Forest models on edge devices using Flower.
+  \item Achieved over 96\% detection accuracy while minimizing data transfers, improving privacy and responsiveness.
+\end{itemize}
+
+\noindent
+
+\noindent
+{\textbf{Blood Bank Management System}} 
+\href{https://attached-files--vivanboyat9.replit.app}{\textbf{ | Project Link}} 
+\hfill April 2023 \\
+\textit{(Database) \hfill (ER Diagrams, RDBMS, SQL)}
+
+
+\begin{itemize}
+  \item Built a relational database to manage 500+ donor records, 8 blood types, and 100+ transfusion logs.
+  \item Automated inventory tracking, expiry alerts, and donor checks, reducing manual work by 70\%.
+\end{itemize}
+
+% ================= EDUCATION =================
+
+% ================= CERTIFICATIONS =================
+\section*{Achivements Certifications}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+Google Cybersecurity Professional Certificate & 2024 \\
+Red Hat System Administration I and II & 2023 \\
+Cisco Networking Basics & 2023 \\
+Certified Ethical Hacker (CEH) & In Progress \\
+\end{tabularx}
+
+\end{document}
