@@ -1,136 +1,136 @@
-# Vinay Boyat - DevOps Engineer Portfolio
+<div align="center">
 
-A comprehensive portfolio website showcasing DevOps, cybersecurity, and cloud infrastructure projects with a unique blueprint-themed design.
+# 🖥️ Personal Portfolio Website
 
-## 🚀 Features
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]()
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-pink-beta-1y6l6m0ylt.vercel.app)
 
-- **Blueprint-Themed Design**: Unique technical schematic aesthetic
-- **5 Detailed Project Pages**: Each project has its own dedicated page with comprehensive details
-- **Responsive Layout**: Works seamlessly on desktop, tablet, and mobile devices
-- **Interactive Elements**: TOR toggle effect, smooth scrolling, and animations
-- **Contact Form**: Functional contact interface (demo mode)
+> 🚀 My personal portfolio website — showcasing my projects, skills, and journey as a developer.
+
+**[🌐 Live Demo →](https://portfolio-pink-beta-1y6l6m0ylt.vercel.app)**
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [About](#-about)
+- [Live Demo](#-live-demo)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Sections](#-sections)
+- [Installation](#-installation)
+- [Project Structure](#-project-structure)
+- [Author](#-author)
+
+---
+
+## 🔍 About
+
+This is my **personal portfolio website** built from scratch using HTML, CSS, and JavaScript. It serves as my digital identity as a developer — showcasing who I am, what I've built, and how to reach me.
+
+The site is fully responsive, mobile-friendly, and deployed on **Vercel** for free hosting.
+
+---
+
+## 🌐 Live Demo
+
+🔗 **[https://portfolio-pink-beta-1y6l6m0ylt.vercel.app](https://portfolio-pink-beta-1y6l6m0ylt.vercel.app)**
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 👤 **About Me** | Professional introduction & background |
+| 💼 **Projects** | Showcase of my best work with live links |
+| 🛠️ **Skills** | Tech stack displayed with icons |
+| 📬 **Contact** | Working contact form & social links |
+| 📱 **Responsive** | Fully mobile & tablet friendly |
+| 🌙 **Modern Design** | Smooth animations & clean UI |
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| **HTML5** | Structure & Semantic markup |
+| **CSS3** | Styling, Flexbox, Grid, Animations |
+| **JavaScript** | Interactivity & Form handling |
+| **Vercel** | Hosting & Continuous Deployment |
+
+---
+
+## 📄 Sections
+
+```
+🏠 Hero         → Eye-catching intro with name & role
+👤 About        → My background, education & passion
+🛠️ Skills       → Technologies I work with
+💼 Projects     → Highlighted projects with links
+📞 Contact      → How to reach me
+```
+
+---
+
+## ⚙️ Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/VINAYBOYAT11/portfolio.git
+cd portfolio
+
+# Open in browser (no build step needed)
+start index.html    # Windows
+open index.html     # macOS
+```
+
+Or deploy directly to Vercel:
+
+```bash
+npm i -g vercel
+vercel
+```
+
+---
 
 ## 📁 Project Structure
 
 ```
-stitch_generated_screen/
-├── index.html              # Main portfolio page
-├── styles.css              # All styling and animations
-├── script.js               # Interactive functionality
-├── code.html               # Original design reference
-├── screen.png              # Design screenshot
-├── projects/               # Individual project pages
-│   ├── deep-web-portfolio.html
-│   ├── kubernetes-deployment.html
-│   ├── siem-implementation.html
-│   ├── iot-intrusion-detection.html
-│   └── blood-bank-system.html
-└── README.md               # This file
+portfolio/
+│
+├── 📄 index.html          # Main HTML file
+├── 📁 css/
+│   └── style.css          # Stylesheet
+├── 📁 js/
+│   └── main.js            # JavaScript
+├── 📁 assets/
+│   └── images/            # Project screenshots & profile image
+└── 📄 README.md
 ```
-
-## 🎯 Projects Included
-
-### 1. Portfolio Website Deployment on Deep Web
-- **Technologies**: Linux, Tor, HTML, CSS, Nginx
-- **Highlights**: Tor hidden service configuration, security hardening
-
-### 2. Containerized Application Deployment using Kubernetes Pods
-- **Technologies**: Docker, YAML, Linux, Kubernetes
-- **Highlights**: Pod lifecycle management, kubectl debugging
-
-### 3. Open Source S.I.E.M Implementation
-- **Technologies**: Graylog, OpenSearch, Grafana, Docker
-- **Highlights**: Log aggregation, real-time monitoring, alerting
-
-### 4. Intrusion Detection in MQTT-based IoT Networks
-- **Technologies**: Python, Pandas, Flower, MQTT, Scikit-learn
-- **Highlights**: Federated learning, 96%+ accuracy, privacy-preserving ML
-
-### 5. Blood Bank Management System
-- **Technologies**: SQL, RDBMS, ER Diagrams
-- **Highlights**: Database design, automated alerts, 70% efficiency improvement
-
-## 🖥️ Running Locally
-
-### Option 1: Python HTTP Server (Recommended)
-```bash
-# Navigate to the project directory
-cd stitch_generated_screen
-
-# Python 3
-python -m http.server 8000
-
-# Python 2 (if needed)
-python -m SimpleHTTPServer 8000
-```
-
-Then open your browser to: `http://localhost:8000`
-
-### Option 2: Node.js HTTP Server
-```bash
-# Install http-server globally (one-time)
-npm install -g http-server
-
-# Run the server
-http-server -p 8000
-```
-
-### Option 3: PHP Built-in Server
-```bash
-php -S localhost:8000
-```
-
-### Option 4: Live Server (VS Code Extension)
-1. Install "Live Server" extension in VS Code
-2. Right-click on `index.html`
-3. Select "Open with Live Server"
-
-## 🎨 Design Features
-
-- **Color Scheme**: Dark blueprint theme with cyan accents
-- **Typography**: Inter font family for modern, clean text
-- **Grid Background**: Technical schematic grid pattern
-- **Interactive Toggle**: TOR connection simulation with visual effects
-- **Smooth Animations**: Fade-in effects on scroll
-
-## 📧 Contact Information
-
-- **Email**: vinayboyat102@gmail.com
-- **LinkedIn**: [Profile Link]
-- **GitHub**: [Profile Link]
-
-## 🛠️ Technologies Used
-
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Framework**: Tailwind CSS (CDN)
-- **Fonts**: Google Fonts (Inter)
-- **Icons**: SVG inline icons
-
-## 📱 Browser Compatibility
-
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
-- Tor Browser (for authentic blueprint experience)
-
-## 🔒 Security Note
-
-The TOR toggle is a visual effect only and does not actually route traffic through the Tor network. 
-It's included as a thematic element related to the Deep Web Portfolio project.
-
-## 📄 License
-
-This portfolio is created for personal use. Feel free to use the design as inspiration for your own portfolio.
-
-## 🙏 Acknowledgments
-
-- Design inspired by technical schematics and blueprint aesthetics
-- Built with modern web technologies and best practices
-- Optimized for performance and accessibility
 
 ---
 
-**Maintainer**: Vinay Boyat | DevOps Engineer | Cybersecurity Enthusiast
+## 👨‍💻 Author
 
-*Last Updated*: February 2026
+**Vinay Boyat**
+
+[![GitHub](https://img.shields.io/badge/GitHub-VINAYBOYAT11-181717?style=for-the-badge&logo=github)](https://github.com/VINAYBOYAT11)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-00C7B7?style=for-the-badge&logo=vercel)](https://portfolio-pink-beta-1y6l6m0ylt.vercel.app)
+
+---
+
+<div align="center">
+
+> ✨ *"The best way to predict the future is to build it."*
+
+⭐ **If you like my portfolio, drop a star on this repo!** ⭐
+
+*Made with ❤️ by Vinay Boyat*
+
+</div>
